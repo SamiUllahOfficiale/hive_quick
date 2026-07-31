@@ -1,3 +1,13 @@
+## 1.0.2
+
+- Added official web platform support.
+- Updated `flutter_secure_storage` dependency constraints to target version `^10.3.1`.
+
+## 1.0.1
+
+- Updated `flutter_secure_storage` dependency constraints to latest stable versions.
+- Explicitly configured supported platform declarations for mobile and desktop environments.
+
 ## 1.0.0
 
 - Initial official release of `hive_quick`.
