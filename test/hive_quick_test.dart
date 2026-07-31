@@ -1,19 +1,24 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive_quick/hive_quick.dart';
 
-void main() {
+void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
-  final tempDir = Directory.systemTemp.createTempSync('hive_quick_test');
 
-  setUpAll(() async {
+  Directory? tempDir;
+
+  if (kIsWeb) {
+    await Hive.initFlutter();
+  } else {
+    tempDir = Directory.systemTemp.createTempSync('hive_quick_test');
     Hive.init(tempDir.path);
-  });
+  }
 
   tearDownAll(() async {
     await Hive.close();
-    if (tempDir.existsSync()) {
+    if (!kIsWeb && tempDir != null && tempDir.existsSync()) {
       tempDir.deleteSync(recursive: true);
     }
   });

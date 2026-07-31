@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Added WASM-compatible test adjustments for web platform support, securing full pub.dev analysis points.
+
 ## 1.0.2
 
 - Added official web platform support.
