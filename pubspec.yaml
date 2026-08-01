@@ -1,5 +1,5 @@
 name: hive_quick
-description: A lightweight, intuitive, offline-first storage library built on top of Hive with Mongoose-style API methods. #database #hive #localstorage #offline #nosql
+description: A lightweight, intuitive, offline-first storage library built on top of Hive with Mongoose-style API methods.
 version: 1.0.3
 homepage: https://github.com/SamiUllahOfficiale/hive_quick
 repository: https://github.com/SamiUllahOfficiale/hive_quick
@@ -29,3 +29,11 @@ platforms:
   macos:
   windows:
   web:
+
+topics:
+  - database
+  - hive
+  - localstorage
+  - offline
+  - nosql
+  - mongoose
